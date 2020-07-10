@@ -8,7 +8,7 @@ const path = require('path')
         {
             host: "smtp-mail.outlook.com",
             secureConnection: false,
-            port: 587, 
+            port: process.env.OUTLOOK_EMAIL  , //Port default outlook : 587
             tls: {
                 ciphers:'SSLv3'
             },
@@ -17,7 +17,7 @@ const path = require('path')
                 pass: process.env.OUTLOOK_PASS
             }
         } : {
-            service: 'gmail',
+            service: 'gmail', ///Port default outlook : 465
             port: process.env.GMAIL_PORT, 
             auth: {
                 user: process.env.GMAIL_EMAIL,
@@ -27,10 +27,10 @@ const path = require('path')
     
         let handlebarsOption = {
             viewEngine: {
-                partialsDir: '../nodemailerExpress/views/',
+                partialsDir: '../views/',
                 defaultLayout: ""
             },
-            viewPath: path.resolve('/home/leo/fifaProject/back/src/views/'),
+            viewPath: path.resolve(process.env.PATH),
             extName: '.handlebars'
         }
     
