@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-self: center;
+            width: 100%;
+            height: 300px;
+            background-color: rgb(39, 144, 158);     
+
+        }      
+
+        .box{
+            height: 150;
+            width: 320px;
+            padding: 5px;
+            background-color: whitesmoke;
+            flex-direction: row;
+            margin: auto;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        p{
+            margin-left: 80px;
+        }
+
+        .but {
+            margin-left: 93px;
+        }
+
+        .presentation {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    {{!-- <a href="http://localhost:4000/SignIn"</a> --}}
+    <div class="container" >    
+        <div class="box">
+            <h4 class="presentation" > Your token to autheticate your account is beneath </h4>
+            <p> {{data}} </p>
+           <a class="but" href="http://localhost:4000/SignUp"> <button> Authetication </button></a> 
+        </div>
+    </div>
+</body>
+</html>
